@@ -1,0 +1,234 @@
+/* ============================================================
+   Cuentas Claras — Design Tokens
+   Fuente única de verdad para color, tipografía, espacio y forma.
+   No usar valores hardcodeados fuera de este archivo.
+   ============================================================ */
+
+:root {
+  /* ---------- Marca ---------- */
+  --cc-primary:            #0E6B54;  /* Verde Sereno */
+  --cc-primary-hover:      #0A5342;
+  --cc-primary-press:      #074638;
+  --cc-primary-soft:       #DCEFE8;  /* fondos, chips, header de tablas */
+  --cc-primary-contrast:   #FFFFFF;
+
+  --cc-accent:             #E8964A;  /* Ámbar Cálido */
+  --cc-accent-hover:       #D4813A;
+  --cc-accent-soft:        #FBEBDC;
+
+  /* ---------- Superficies ---------- */
+  --cc-bg:                 #FAF7F2;  /* fondo de app, crema cálido */
+  --cc-surface:            #FFFFFF;
+  --cc-surface-alt:        #FDFCFA;  /* filas alternas, listas */
+  --cc-surface-sunken:     #F2EDE5;  /* inputs, áreas de drop */
+  --cc-border:             #E8E1D6;
+  --cc-border-strong:      #D6CCBC;
+  --cc-overlay:            rgba(20, 33, 28, 0.45);
+
+  /* ---------- Texto ---------- */
+  --cc-text:               #14211C;
+  --cc-text-secondary:     #5F6B65;
+  --cc-text-tertiary:      #939C97;
+  --cc-text-inverse:       #FAF7F2;
+
+  /* ---------- Semánticos de dinero ----------
+     Regla: nunca comunicar solo con color.
+     Siempre acompañar con signo (+/-) e ícono. */
+  --cc-income:             #1E9E6A;  /* ingreso */
+  --cc-income-soft:        #E0F4EB;
+  --cc-expense:            #D9524F;  /* gasto */
+  --cc-expense-soft:       #FBE7E6;
+  --cc-savings:            #3D7EA6;  /* bolsillos / ahorro */
+  --cc-savings-soft:       #E2EEF6;
+  --cc-debt:               #7C5CBF;  /* préstamos, hipoteca, financiación */
+  --cc-debt-soft:          #EEE8FA;
+  --cc-warning:            #E0A63C;  /* presupuesto en riesgo */
+  --cc-warning-soft:       #FCF2DE;
+  --cc-ant:                #C97B9A;  /* gastos hormiga */
+  --cc-ant-soft:           #F9E9F0;
+  --cc-neutral:            #7A8681;  /* transferencias internas */
+
+  /* ---------- Tipografía ----------
+     Display: Piazzolla (Huerta Tipográfica, AR) — serif variable diseñada
+       para el español, con eje de tamaño óptico. Uso restringido.
+     UI:      Instrument Sans — neutral con carácter, no genérica.
+     Cifras:  Inter — relegada a números por sus numerales tabulares. */
+  --cc-font-display: "Piazzolla", ui-serif, Georgia, serif;
+  --cc-font-body:    "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --cc-font-numeric: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --cc-size-display:  2.75rem; /* 44 — monto héroe del dashboard */
+  --cc-size-h1:       2rem;    /* 32 */
+  --cc-size-h2:       1.5rem;  /* 24 */
+  --cc-size-h3:       1.25rem; /* 20 */
+  --cc-size-lg:       1.0625rem; /* 17 */
+  --cc-size-base:     0.9375rem; /* 15 */
+  --cc-size-sm:       0.8125rem; /* 13 */
+  --cc-size-xs:       0.6875rem; /* 11 — eyebrows en mayúsculas */
+
+  --cc-weight-regular: 400;
+  --cc-weight-medium:  500;
+  --cc-weight-semi:    600;
+  --cc-weight-bold:    700;
+
+  --cc-leading-tight: 1.15;
+  --cc-leading-snug:  1.35;
+  --cc-leading-body:  1.55;
+  --cc-tracking-eyebrow: 0.08em;
+
+  /* ---------- Forma ---------- */
+  --cc-radius-xs:   8px;
+  --cc-radius-sm:   12px;  /* inputs, botones */
+  --cc-radius-md:   16px;  /* tarjetas */
+  --cc-radius-lg:   24px;  /* bottom sheets, modales */
+  --cc-radius-full: 999px; /* chips, avatares, FAB */
+
+  /* ---------- Elevación (cálida, nunca gris neutro) ---------- */
+  --cc-shadow-xs: 0 1px 2px rgba(20, 33, 28, 0.06);
+  --cc-shadow-sm: 0 2px 8px rgba(20, 33, 28, 0.07);
+  --cc-shadow-md: 0 8px 24px rgba(20, 33, 28, 0.08);
+  --cc-shadow-lg: 0 16px 40px rgba(20, 33, 28, 0.12);
+  --cc-shadow-fab: 0 6px 18px rgba(14, 107, 84, 0.32);
+
+  /* ---------- Espacio (base 4px) ---------- */
+  --cc-space-1: 4px;   --cc-space-2: 8px;   --cc-space-3: 12px;
+  --cc-space-4: 16px;  --cc-space-5: 20px;  --cc-space-6: 24px;
+  --cc-space-8: 32px;  --cc-space-10: 40px; --cc-space-12: 48px;
+
+  /* ---------- Layout mobile ---------- */
+  --cc-gutter: 20px;
+  --cc-max-width: 430px;
+  --cc-tap-target: 44px;
+  --cc-nav-height: 64px;
+  --cc-safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* ---------- Movimiento ---------- */
+  --cc-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --cc-ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --cc-dur-fast: 140ms;
+  --cc-dur-base: 220ms;
+  --cc-dur-sheet: 320ms;
+}
+
+/* ============================================================
+   Modo oscuro — obligatorio, no opcional
+   ============================================================ */
+:root[data-theme="dark"] {
+  --cc-primary:          #3FBF9C;
+  --cc-primary-hover:    #58D0AE;
+  --cc-primary-press:    #2FA687;
+  --cc-primary-soft:     #133029;
+  --cc-primary-contrast: #06120E;
+
+  --cc-accent:      #F0A863;
+  --cc-accent-soft: #332415;
+
+  --cc-bg:             #101614;
+  --cc-surface:        #18201D;
+  --cc-surface-alt:    #1C2522;
+  --cc-surface-sunken: #131A18;
+  --cc-border:         #2A342F;
+  --cc-border-strong:  #3A4741;
+  --cc-overlay:        rgba(0, 0, 0, 0.6);
+
+  --cc-text:           #EDF2EF;
+  --cc-text-secondary: #9AA8A2;
+  --cc-text-tertiary:  #6C7A74;
+  --cc-text-inverse:   #101614;
+
+  --cc-income:      #45C68C;  --cc-income-soft:  #123026;
+  --cc-expense:     #F0736F;  --cc-expense-soft: #33191A;
+  --cc-savings:     #63A6CE;  --cc-savings-soft: #14252F;
+  --cc-debt:        #A188DC;  --cc-debt-soft:    #241E38;
+  --cc-warning:     #EFC061;  --cc-warning-soft: #32280F;
+  --cc-ant:         #E09BB8;  --cc-ant-soft:     #331F28;
+  --cc-neutral:     #8E9A95;
+
+  --cc-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --cc-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --cc-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --cc-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* ============================================================
+   Reglas base no negociables
+   ============================================================ */
+
+/* Todo monto de dinero usa cifras tabulares para que las columnas
+   se alineen y los números no "bailen" al actualizarse. */
+.cc-amount {
+  font-family: var(--cc-font-numeric);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "ss01" 1;
+  font-weight: var(--cc-weight-semi);
+  letter-spacing: -0.01em;
+}
+
+/* El símbolo de moneda y los decimales van más pequeños y suaves:
+   el ojo lee la magnitud primero. */
+.cc-amount__currency,
+.cc-amount__decimals {
+  font-size: 0.62em;
+  opacity: 0.6;
+  font-weight: var(--cc-weight-medium);
+}
+
+/* Eyebrow / etiqueta de dato */
+.cc-eyebrow {
+  font-size: var(--cc-size-xs);
+  font-weight: var(--cc-weight-semi);
+  text-transform: uppercase;
+  letter-spacing: var(--cc-tracking-eyebrow);
+  color: var(--cc-text-secondary);
+}
+
+/* Títulos con el serif, siempre con restricción */
+.cc-display {
+  font-family: var(--cc-font-display);
+  font-optical-sizing: auto;
+  font-weight: var(--cc-weight-semi);
+  line-height: var(--cc-leading-tight);
+  letter-spacing: -0.015em;
+}
+
+/* Accesibilidad: área táctil y foco visible */
+.cc-tappable {
+  min-height: var(--cc-tap-target);
+  min-width: var(--cc-tap-target);
+}
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--cc-primary);
+  outline-offset: 2px;
+  border-radius: var(--cc-radius-xs);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   ELEMENTO FIRMA — "La Escalera"
+   Timeline de amortización. Es la pantalla por la que la app se
+   recuerda: toda la boldness del sistema se gasta aquí.
+   Cada mes es un escalón. El ancho de la banda morada (interés)
+   se encoge y el de la banda verde (capital) crece a medida que
+   bajas: se VE cómo dejas de pagarle al banco y empiezas a
+   pagarte a ti. Ningún otro componente compite con esto.
+   ============================================================ */
+:root {
+  --esc-rail-width: 2px;            /* riel vertical del saldo */
+  --esc-step-height: 56px;          /* alto de un mes */
+  --esc-step-gap: 6px;
+  --esc-bar-height: 10px;
+  --esc-bar-radius: var(--cc-radius-full);
+  --esc-interest: var(--cc-debt);   /* morado: lo que se va en interés */
+  --esc-capital: var(--cc-income);  /* verde: lo que baja tu deuda */
+  --esc-paid-opacity: 0.35;         /* meses ya pagados, atenuados */
+  --esc-today-ring: var(--cc-accent);
+  --esc-extra: var(--cc-accent);    /* simulación de abono extra */
+  --esc-saved-glow: 0 0 0 3px var(--cc-accent-soft);
+}
+
