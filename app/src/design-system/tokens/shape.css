@@ -1,0 +1,19 @@
+:root{
+  --cc-radius-xs:   8px;
+  --cc-radius-sm:   12px;  /* inputs, botones */
+  --cc-radius-md:   16px;  /* tarjetas */
+  --cc-radius-lg:   24px;  /* bottom sheets, modales */
+  --cc-radius-full: 999px; /* chips, avatares, FAB */
+
+  --cc-shadow-xs: 0 1px 2px rgba(20, 33, 28, 0.06);
+  --cc-shadow-sm: 0 2px 8px rgba(20, 33, 28, 0.07);
+  --cc-shadow-md: 0 8px 24px rgba(20, 33, 28, 0.08);
+  --cc-shadow-lg: 0 16px 40px rgba(20, 33, 28, 0.12);
+  --cc-shadow-fab: 0 6px 18px rgba(14, 107, 84, 0.32);
+}
+:root[data-theme="dark"]{
+  --cc-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --cc-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --cc-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --cc-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+}

@@ -1,0 +1,24 @@
+:root{
+  --cc-font-display: "Piazzolla", ui-serif, Georgia, serif;
+  --cc-font-body:    "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --cc-font-numeric: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --cc-size-display:  2.75rem;   /* 44 — monto heroe del dashboard */
+  --cc-size-h1:       2rem;      /* 32 */
+  --cc-size-h2:       1.5rem;    /* 24 */
+  --cc-size-h3:       1.25rem;   /* 20 */
+  --cc-size-lg:       1.0625rem; /* 17 */
+  --cc-size-base:     0.9375rem; /* 15 */
+  --cc-size-sm:       0.8125rem; /* 13 */
+  --cc-size-xs:       0.6875rem; /* 11 — eyebrows en mayusculas */
+
+  --cc-weight-regular: 400; /* @kind font */
+  --cc-weight-medium:  500; /* @kind font */
+  --cc-weight-semi:    600; /* @kind font */
+  --cc-weight-bold:    700; /* @kind font */
+
+  --cc-leading-tight: 1.15; /* @kind font */
+  --cc-leading-snug:  1.35; /* @kind font */
+  --cc-leading-body:  1.55; /* @kind font */
+  --cc-tracking-eyebrow: 0.08em; /* @kind font */
+}

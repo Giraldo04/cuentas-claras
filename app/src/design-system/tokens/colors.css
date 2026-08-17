@@ -1,0 +1,77 @@
+:root{
+  /* ---------- Marca ---------- */
+  --cc-primary:            #0E6B54;  /* Verde Sereno */
+  --cc-primary-hover:      #0A5342;
+  --cc-primary-press:      #074638;
+  --cc-primary-soft:       #DCEFE8;  /* fondos, chips, header de tablas */
+  --cc-primary-contrast:   #FFFFFF;
+
+  --cc-accent:             #E8964A;  /* Ambar Calido */
+  --cc-accent-hover:       #D4813A;
+  --cc-accent-soft:        #FBEBDC;
+
+  /* ---------- Superficies ---------- */
+  --cc-bg:                 #FAF7F2;  /* fondo de app, crema calido */
+  --cc-surface:            #FFFFFF;
+  --cc-surface-alt:        #FDFCFA;  /* filas alternas, listas */
+  --cc-surface-sunken:     #F2EDE5;  /* inputs, areas de drop */
+  --cc-border:             #E8E1D6;
+  --cc-border-strong:      #D6CCBC;
+  --cc-overlay:            rgba(20, 33, 28, 0.45);
+
+  /* ---------- Texto ---------- */
+  --cc-text:               #14211C;
+  --cc-text-secondary:     #5F6B65;
+  --cc-text-tertiary:      #939C97;
+  --cc-text-inverse:       #FAF7F2;
+
+  /* ---------- Semanticos de dinero ----------
+     Regla: nunca comunicar solo con color. Siempre signo (+/-) e icono. */
+  --cc-income:             #1E9E6A;
+  --cc-income-soft:        #E0F4EB;
+  --cc-expense:            #D9524F;
+  --cc-expense-soft:       #FBE7E6;
+  --cc-savings:            #3D7EA6;
+  --cc-savings-soft:       #E2EEF6;
+  --cc-debt:               #7C5CBF;
+  --cc-debt-soft:          #EEE8FA;
+  --cc-warning:            #E0A63C;
+  --cc-warning-soft:       #FCF2DE;
+  --cc-ant:                #C97B9A;
+  --cc-ant-soft:           #F9E9F0;
+  --cc-neutral:            #7A8681;  /* transferencias internas */
+}
+
+/* Modo oscuro — obligatorio, no opcional */
+:root[data-theme="dark"]{
+  --cc-primary:          #3FBF9C;
+  --cc-primary-hover:    #58D0AE;
+  --cc-primary-press:    #2FA687;
+  --cc-primary-soft:     #133029;
+  --cc-primary-contrast: #06120E;
+
+  --cc-accent:      #F0A863;
+  --cc-accent-hover:#F5BA82;
+  --cc-accent-soft: #332415;
+
+  --cc-bg:             #101614;
+  --cc-surface:        #18201D;
+  --cc-surface-alt:    #1C2522;
+  --cc-surface-sunken: #131A18;
+  --cc-border:         #2A342F;
+  --cc-border-strong:  #3A4741;
+  --cc-overlay:        rgba(0, 0, 0, 0.6);
+
+  --cc-text:           #EDF2EF;
+  --cc-text-secondary: #9AA8A2;
+  --cc-text-tertiary:  #6C7A74;
+  --cc-text-inverse:   #101614;
+
+  --cc-income:      #45C68C;  --cc-income-soft:  #123026;
+  --cc-expense:     #F0736F;  --cc-expense-soft: #33191A;
+  --cc-savings:     #63A6CE;  --cc-savings-soft: #14252F;
+  --cc-debt:        #A188DC;  --cc-debt-soft:    #241E38;
+  --cc-warning:     #EFC061;  --cc-warning-soft: #32280F;
+  --cc-ant:         #E09BB8;  --cc-ant-soft:     #331F28;
+  --cc-neutral:     #8E9A95;
+}

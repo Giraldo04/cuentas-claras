@@ -1,0 +1,11 @@
+:root{
+  --cc-space-1: 4px;   --cc-space-2: 8px;   --cc-space-3: 12px;
+  --cc-space-4: 16px;  --cc-space-5: 20px;  --cc-space-6: 24px;
+  --cc-space-8: 32px;  --cc-space-10: 40px; --cc-space-12: 48px;
+
+  --cc-gutter: 20px;
+  --cc-max-width: 430px;
+  --cc-tap-target: 44px;
+  --cc-nav-height: 64px;
+  --cc-safe-bottom: env(safe-area-inset-bottom, 0px);
+}
