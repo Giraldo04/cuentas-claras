@@ -1,0 +1,78 @@
+<!-- @dsCard group="Reporte PDF" viewport="820x1000" name="Reporte mensual A4" subtitle="Encabezado, KPIs, tabla, escalera y marca de agua — A4 vertical, márgenes 18mm" -->
+<!-- @startingPoint section="Documentos" subtitle="Reporte PDF mensual del hogar (A4)" viewport="820x1000" -->
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><title>Reporte mensual — Cuentas Claras</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+@page{size:A4 portrait;margin:0}
+body{margin:0;background:#EDEAE4;padding:24px;font-family:var(--cc-font-body);color:var(--cc-text)}
+.page{position:relative;width:210mm;min-height:297mm;padding:18mm;margin:0 auto 24px;background:var(--cc-surface);box-shadow:var(--cc-shadow-lg);overflow:hidden;display:flex;flex-direction:column}
+.wm{position:absolute;left:50%;top:46%;width:45%;transform:translate(-50%,-50%) rotate(-22deg);opacity:.05;pointer-events:none}
+.wm-text{position:absolute;left:50%;top:62%;transform:translate(-50%,-50%) rotate(-22deg);font-family:var(--cc-font-display);font-size:64px;font-weight:700;letter-spacing:.04em;color:var(--cc-primary);opacity:.07;pointer-events:none;white-space:nowrap}
+.content{position:relative;flex:1}
+header.band{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--cc-bg);border-radius:var(--cc-radius-sm);padding:12px 16px;margin-bottom:10mm}
+header.band .meta{text-align:right;font-size:11px;line-height:1.6;color:var(--cc-text-secondary)}
+header.band .meta b{display:block;font-size:13px;color:var(--cc-text);font-weight:600}
+h2.sec{font-family:var(--cc-font-display);font-optical-sizing:auto;font-weight:600;font-size:20px;letter-spacing:-.015em;margin:0 0 10px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:9mm}
+.kpi{border:1px solid var(--cc-border);border-radius:var(--cc-radius-sm);padding:12px}
+.kpi span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--cc-text-secondary);font-weight:600;margin-bottom:6px}
+.kpi b{font-family:var(--cc-font-numeric);font-variant-numeric:tabular-nums;font-size:24px;font-weight:600;letter-spacing:-.01em}
+table{width:100%;border-collapse:collapse;font-size:11px}
+thead th{background:var(--cc-primary-soft);color:var(--cc-primary);font-size:10px;text-transform:uppercase;letter-spacing:.08em;text-align:left;padding:8px 10px;font-weight:600}
+thead th:last-child{text-align:right}
+tbody td{padding:8px 10px;border-bottom:1px solid var(--cc-border)}
+tbody tr.alt{background:var(--cc-surface-alt)}
+.num{font-family:var(--cc-font-numeric);font-variant-numeric:tabular-nums}
+.right{text-align:right;font-weight:600}
+.cat{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10px;font-weight:600;color:var(--c);background:color-mix(in oklab,var(--c) 14%,transparent)}
+footer.foot{position:relative;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--cc-border);padding-top:8px;margin-top:10mm;font-size:9.5px;color:var(--cc-text-secondary)}
+.esc-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.esc-row span.lab{width:60px;font-size:10px;color:var(--cc-text-tertiary);font-family:var(--cc-font-numeric)}
+.esc-bar{flex:1;display:flex;height:9px;border-radius:999px;overflow:hidden}
+.legend{display:flex;gap:16px;font-size:10px;color:var(--cc-text-secondary);margin-bottom:10px}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:999px;margin-right:5px;vertical-align:-1px}
+.cover{align-items:center;justify-content:center;text-align:center;background:var(--cc-bg)}
+@media print{body{background:none;padding:0}.page{box-shadow:none;margin:0;page-break-after:always}}
+</style></head><body>
+
+<!-- Portada opcional (reportes anuales) -->
+<section class="page cover">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:28px">
+    <img src="../../assets/logo/isotipo.svg" width="120" alt="">
+    <h1 class="cc-display" style="margin:0;font-size:40px">Reporte anual 2026</h1>
+    <p style="margin:0;font-size:15px;color:var(--cc-text-secondary)">Hogar: Casa Ruiz · Enero – Diciembre 2026</p>
+    <p style="margin-top:60px;font-family:var(--cc-font-display);font-size:15px;color:var(--cc-primary)">Cuentas claras, hogar en paz.</p>
+  </div>
+</section>
+
+<!-- Página de reporte mensual -->
+<section class="page">
+  <img class="wm" src="../../assets/logo/isotipo.svg" alt="">
+  <div class="wm-text">BORRADOR</div>
+  <div class="content">
+    <header class="band">
+      <img src="../../assets/logo/logo-horizontal.svg" width="190" alt="Cuentas Claras">
+      <div class="meta"><b>Reporte mensual · 1 – 31 de agosto de 2026</b>Hogar: Casa Ruiz · 2 adultos, 2 hijos</div>
+    </header>
+
+    <div class="kpis">
+      <div class="kpi"><span>Ingresos</span><b style="color:var(--cc-income)">+$6.200.000</b></div>
+      <div class="kpi"><span>Gastos</span><b style="color:var(--cc-expense)">−$4.130.000</b></div>
+      <div class="kpi"><span>Ahorro</span><b style="color:var(--cc-savings)">$1.850.000</b></div>
+      <div class="kpi"><span>Gasto hormiga</span><b style="color:var(--cc-ant)">$214.300</b></div>
+    </div>
+
+    <h2 class="sec">Movimientos del periodo</h2>
+    <table><thead><tr><th>Fecha</th><th>Concepto</th><th>Categoría</th><th>Quién</th><th>Monto</th></tr></thead>
+    <tbody><tr><td class="num">14 ago</td><td>Mercado de la semana</td><td><span class="cat" style="--c:var(--cc-expense)">Mercado</span></td><td>Ana</td><td class="num right" style="color:var(--cc-expense)">−$182.400</td></tr><tr class="alt"><td class="num">13 ago</td><td>Mensualidad colegio</td><td><span class="cat" style="--c:var(--cc-savings)">Educación</span></td><td>Tomás</td><td class="num right" style="color:var(--cc-expense)">−$640.000</td></tr><tr><td class="num">12 ago</td><td>Energía y agua</td><td><span class="cat" style="--c:var(--cc-warning)">Servicios</span></td><td>Diego</td><td class="num right" style="color:var(--cc-expense)">−$213.800</td></tr><tr class="alt"><td class="num">10 ago</td><td>Abono a Viaje a Cartagena</td><td><span class="cat" style="--c:var(--cc-savings)">Bolsillo</span></td><td>Ana</td><td class="num right" style="color:var(--cc-expense)">−$350.000</td></tr><tr><td class="num">8 ago</td><td>Café en la esquina</td><td><span class="cat" style="--c:var(--cc-ant)">Hormiga</span></td><td>Diego</td><td class="num right" style="color:var(--cc-expense)">−$6.500</td></tr><tr class="alt"><td class="num">5 ago</td><td>Cuota hipoteca</td><td><span class="cat" style="--c:var(--cc-debt)">Hipoteca</span></td><td>Diego</td><td class="num right" style="color:var(--cc-expense)">−$1.840.000</td></tr><tr><td class="num">1 ago</td><td>Nómina Ana</td><td><span class="cat" style="--c:var(--cc-income)">Salario</span></td><td>Ana</td><td class="num right" style="color:var(--cc-income)">+$3.100.000</td></tr><tr class="alt"><td class="num">1 ago</td><td>Nómina Diego</td><td><span class="cat" style="--c:var(--cc-income)">Salario</span></td><td>Diego</td><td class="num right" style="color:var(--cc-income)">+$3.100.000</td></tr></tbody></table>
+
+    <h2 class="sec" style="margin-top:9mm">La Escalera · Hipoteca Apartamento Chapinero</h2>
+    <div class="legend"><span><i style="background:var(--esc-interest)"></i>Interés</span><span><i style="background:var(--esc-capital)"></i>Capital</span><span style="margin-left:auto">Cuota $1.840.000 · saldo $318.000.000</span></div>
+    <div class="esc-row"><span class="lab">Sep 2026</span><span class="esc-bar"><i style="width:72%;background:var(--esc-interest)"></i><i style="flex:1;background:var(--esc-capital)"></i></span></div><div class="esc-row"><span class="lab">Oct 2026</span><span class="esc-bar"><i style="width:70%;background:var(--esc-interest)"></i><i style="flex:1;background:var(--esc-capital)"></i></span></div><div class="esc-row"><span class="lab">Nov 2026</span><span class="esc-bar"><i style="width:68%;background:var(--esc-interest)"></i><i style="flex:1;background:var(--esc-capital)"></i></span></div><div class="esc-row"><span class="lab">Dic 2026</span><span class="esc-bar"><i style="width:66%;background:var(--esc-interest)"></i><i style="flex:1;background:var(--esc-capital)"></i></span></div><div class="esc-row"><span class="lab">Ene 2027</span><span class="esc-bar"><i style="width:64%;background:var(--esc-interest)"></i><i style="flex:1;background:var(--esc-capital)"></i></span></div><div class="esc-row"><span class="lab">Feb 2027</span><span class="esc-bar"><i style="width:62%;background:var(--esc-interest)"></i><i style="flex:1;background:var(--esc-capital)"></i></span></div><div class="esc-row"><span class="lab">Mar 2027</span><span class="esc-bar"><i style="width:60%;background:var(--esc-interest)"></i><i style="flex:1;background:var(--esc-capital)"></i></span></div><div class="esc-row"><span class="lab">Abr 2027</span><span class="esc-bar"><i style="width:57%;background:var(--esc-interest)"></i><i style="flex:1;background:var(--esc-capital)"></i></span></div>
+    <p style="font-size:10px;color:var(--cc-text-tertiary);margin-top:8px">La tabla numérica de amortización va como anexo en la página siguiente.</p>
+  </div>
+
+  <footer class="foot"><span>Generado con Cuentas Claras · 15 ago 2026, 9:41</span><span style="font-family:var(--cc-font-display)">Cuentas claras, hogar en paz.</span><span class="num">Página 2 de 3</span></footer>
+</section>
+
+</body></html>

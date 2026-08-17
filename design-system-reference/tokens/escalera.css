@@ -1,0 +1,14 @@
+/* ELEMENTO FIRMA — "La Escalera": timeline de amortizacion mes a mes. */
+:root{
+  --esc-rail-width: 2px;
+  --esc-step-height: 56px;
+  --esc-step-gap: 6px;
+  --esc-bar-height: 10px;
+  --esc-bar-radius: var(--cc-radius-full);
+  --esc-interest: var(--cc-debt);   /* morado: lo que se va en interes */
+  --esc-capital: var(--cc-income);  /* verde: lo que baja tu deuda */
+  --esc-paid-opacity: 0.35; /* @kind other */
+  --esc-today-ring: var(--cc-accent);
+  --esc-extra: var(--cc-accent);
+  --esc-saved-glow: 0 0 0 3px var(--cc-accent-soft);
+}

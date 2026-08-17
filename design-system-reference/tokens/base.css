@@ -1,0 +1,14 @@
+body{background:var(--cc-bg);color:var(--cc-text);font-family:var(--cc-font-body);font-size:var(--cc-size-base);line-height:var(--cc-leading-body);-webkit-font-smoothing:antialiased}
+a{color:var(--cc-primary);text-decoration:none}
+a:hover{color:var(--cc-primary-hover);text-decoration:underline}
+
+/* Todo monto usa cifras tabulares para que las columnas no "bailen". */
+.cc-amount{font-family:var(--cc-font-numeric);font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1,"ss01" 1;font-weight:var(--cc-weight-semi);letter-spacing:-0.01em}
+.cc-amount__currency,.cc-amount__decimals{font-size:0.62em;opacity:0.6;font-weight:var(--cc-weight-medium)}
+
+.cc-eyebrow{font-size:var(--cc-size-xs);font-weight:var(--cc-weight-semi);text-transform:uppercase;letter-spacing:var(--cc-tracking-eyebrow);color:var(--cc-text-secondary)}
+.cc-display{font-family:var(--cc-font-display);font-optical-sizing:auto;font-weight:var(--cc-weight-semi);line-height:var(--cc-leading-tight);letter-spacing:-0.015em}
+
+.cc-tappable{min-height:var(--cc-tap-target);min-width:var(--cc-tap-target)}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:2px solid var(--cc-primary);outline-offset:2px;border-radius:var(--cc-radius-xs)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}}
